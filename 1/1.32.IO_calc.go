@@ -50,7 +50,7 @@ func main () {
 //		if st == stp { // когда доберемся до стучайно выхваченной строки
 //			fmt.Println(read_line)
 			str_numbers := validID.FindAllString(read_line, -1)
-			str_numbers[0] = strings.Trim(str_numbers[0],"\t")
+			str_numbers[0] = strings.Trim(str_numbers[0],"\t") // обрезаем из строки лишний символ "табуляция" ( \t ) - иначе невозможно преобразовать строку в число с плавающей точкой
 //			fmt.Printf("%T %v\n", str_numbers[0], str_numbers[0])
 			if a, err := strconv.ParseFloat(str_numbers[0],64); err == nil {
 //				fmt.Printf("%T %v\n", a, a)
