@@ -27,7 +27,7 @@ func traps(a, b, h float64) (s float64) {
 }
 
 func trapp(a, b, h float64) (p float64) {
-	if a>b { // черт его знает, как будут сгенерированы длины оснований - проверяем какя больше, какая меньше
+	if a > b { // черт его знает, как будут сгенерированы длины оснований - проверяем какая больше, какая меньше
 		p = (a + b) + 2 * math.Sqrt(math.Pow((a - b),2) + math.Pow(h, 2))
 	} else {
 		p = (a + b) + 2 * math.Sqrt(math.Pow((b - a),2) + math.Pow(h, 2))
