@@ -9,3 +9,24 @@
 е) а⁴, а¹² и а²⁸ за шесть операции.
 
 */
+
+package main 
+
+(
+	"math/rand"
+	"fmt"
+	_"math"
+	"time"
+)
+
+	func get(min, max int) (int) { // генерация псевдослучайных (!!! - не путать с действительно случайными) чисел
+	return rand.Intn(max-min) + min
+}
+
+func main () {
+	rand.Seed(time.Now().Unix()) // "сеим" случайности в основоной функции
+	d := get(-1000, 1000) 
+	a := int(get(-d, d)
+	fmt.Println("Случайно выбрано число ", a)
+	fmt.Printf("%s", "а³ и a¹⁰ за четыре операции "
+}
