@@ -35,20 +35,20 @@ import (
 }
 
 	func sqr3(a int) (int) { // возведение в квадрат умножением
-	return a*a*a
+	return sqr(a)*a
 }
 
 	func sqr4(a int) (int) { // возведение в квадрат умножением
-	return a*a*a*a
+	return sqr3(a)*a
 }
 
 func sqr5(a int) (int) { // возведение в квадрат умножением
-	return a*a*a*a*a
+	return sqr4(a)*a
 }
 
 func main () {
 	rand.Seed(time.Now().Unix()) // "сеим" случайности в основоной функции
-	d := get(0, 10) 
+	d := get(0, 100)
 	a := int(get(-d, d))
 	fmt.Println("\n\tСлучайно выбрано число\t", a, "\n")
 	fmt.Printf("%s\t%d\n", "а⁴\tза две операции ", sqr(a)*a*a)
