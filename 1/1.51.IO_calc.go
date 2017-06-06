@@ -26,30 +26,30 @@ import (
 	"time"
 )
 
-	func get(min, max int) (int) { // генерация псевдослучайных (!!! - не путать с действительно случайными) чисел
-	return rand.Intn(max-min) + min
+	func get(min, max int64) (int64) { // генерация псевдослучайных (!!! - не путать с действительно случайными) чисел
+	return rand.Int63n(max-min) + min
 }
 
-	func sqr(a int) (int) { // возведение в квадрат умножением
+	func sqr(a int64) (int64) { // возведение в квадрат умножением
 	return a*a
 }
 
-	func sqr3(a int) (int) { // возведение в квадрат умножением
+	func sqr3(a int64) (int64) { // возведение в квадрат умножением
 	return sqr(a)*a
 }
 
-	func sqr4(a int) (int) { // возведение в квадрат умножением
+	func sqr4(a int64) (int64) { // возведение в квадрат умножением
 	return sqr3(a)*a
 }
 
-func sqr5(a int) (int) { // возведение в квадрат умножением
+func sqr5(a int64) (int64) { // возведение в квадрат умножением
 	return sqr4(a)*a
 }
 
 func main () {
 	rand.Seed(time.Now().Unix()) // "сеим" случайности в основоной функции
-	d := get(0, 100)
-	a := int(get(-d, d))
+	d := get(0, 10)
+	a := int64(get(-d, d))
 	fmt.Println("\n\tСлучайно выбрано число\t", a, "\n")
 	fmt.Printf("%s\t%d\n", "а⁴\tза две операции ", sqr(a)*a*a)
 	fmt.Printf("%s\t%d\n", "а⁶\tза три операции ", sqr(a)*sqr(a)*sqr(a))
