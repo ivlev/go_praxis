@@ -1,0 +1,14 @@
+panic: invalid argument to Intn
+
+goroutine 1 [running]:
+panic(0xb2498, 0x1040a108)
+	/usr/local/go/src/runtime/panic.go:500 +0x33c
+math/rand.(*Rand).Intn(0x10412220, 0x0, 0x0)
+	/usr/local/go/src/math/rand/rand.go:116 +0x6c
+math/rand.Intn(0x0, 0x0)
+	/usr/local/go/src/math/rand/rand.go:247 +0x2c
+main.get(0x0, 0x0, 0x0)
+	/home/pi/gowork/src/github.com/ivlev/go_praxis/1/1.51.IO_calc.go:30 +0x28
+main.main()
+	/home/pi/gowork/src/github.com/ivlev/go_praxis/1/1.51.IO_calc.go:41 +0x90
+exit status 2
