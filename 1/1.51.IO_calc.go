@@ -30,19 +30,36 @@ import (
 	return rand.Intn(max-min) + min
 }
 
-	func sqr (a int) (b int) { // возведение в квадрат умножением
-			b = a*a
-			return b
+	func sqr(a int) (int) { // возведение в квадрат умножением
+	return a*a
+}
+
+	func sqr3(a int) (int) { // возведение в квадрат умножением
+	return a*a*a
+}
+
+	func sqr4(a int) (int) { // возведение в квадрат умножением
+	return a*a*a*a
+}
+
+func sqr5(a int) (int) { // возведение в квадрат умножением
+	return a*a*a*a*a
 }
 
 func main () {
 	rand.Seed(time.Now().Unix()) // "сеим" случайности в основоной функции
 	d := get(0, 10) 
 	a := int(get(-d, d))
-	fmt.Println("\nСлучайно выбрано число ", a)
-	fmt.Printf("%s%d\n", "а⁴ за две операции ", sqr(a)*a*a)
-	fmt.Printf("%s%d\n", "а⁶ за три операции ", sqr(a)*sqr(a)*sqr(a))
-	fmt.Printf("%s%d\n", "а⁷ за четыре операции ", sqr(a)*a*a*a)
-	fmt.Printf("%s%d\n\n", "а⁸ за три операции ", sqr(a)*sqr(a)*sqr(a))
+	fmt.Println("\n\tСлучайно выбрано число\t", a, "\n")
+	fmt.Printf("%s\t%d\n", "а⁴\tза две операции ", sqr(a)*a*a)
+	fmt.Printf("%s\t%d\n", "а⁶\tза три операции ", sqr(a)*sqr(a)*sqr(a))
+	fmt.Printf("%s\t%d\n", "а⁷\tза четыре операции ", sqr(a)*sqr(a)*sqr(a)*a)
+	fmt.Printf("%s\t%d\n", "а⁸\tза три операции ", sqr3(a)*sqr3(a)*sqr(a))
+	fmt.Printf("%s\t%d\n", "а⁹\tза четыре операции ", sqr3(a)*sqr3(a)*sqr(a)*a)
+	fmt.Printf("%s\t%d\n", "а¹³\tза пять операций ", sqr3(a)*sqr3(a)*sqr3(a)*sqr(a)*a*a)
+	fmt.Printf("%s\t%d\n", "а¹⁵\tза пять операций ", sqr3(a)*sqr3(a)*sqr3(a)*sqr3(a)*sqr(a)*a)
+	fmt.Printf("%s\t%d\n", "а²¹\tза шесть операций ", sqr4(a)*sqr4(a)*sqr3(a)*sqr3(a)*sqr3(a)*sqr3(a)*a)
+	fmt.Printf("%s\t%d\n", "а²⁸\tза шесть операций ", sqr5(a)*sqr5(a)*sqr4(a)*sqr4(a)*sqr4(a)*sqr4(a)*sqr(a))
+	fmt.Printf("%s\t%d\n\n", "а¹³\tза шесть операций ", sqr(a)*sqr(a)*sqr(a)*sqr(a)*sqr(a)*sqr(a)*a)
 }
 
