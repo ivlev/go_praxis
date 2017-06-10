@@ -10,9 +10,9 @@
 
 */
 
-package main 
+package main
 
-(
+import (
 	"math/rand"
 	"fmt"
 	_"math"
@@ -24,9 +24,9 @@ package main
 }
 
 func main () {
-	rand.Seed(time.Now().Unix()) // "сеим" случайности в основоной функции
+	rand.Seed(time.Now().Unix()) // "сеим" случайности в основной функции
 	d := get(-1000, 1000) 
 	a := int(get(-d, d)
 	fmt.Println("Случайно выбрано число ", a)
-	fmt.Printf("%s", "а³ и a¹⁰ за четыре операции "
+	fmt.Printf("%s", "а³ и a¹⁰ за четыре операции ")
 }
