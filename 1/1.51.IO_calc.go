@@ -30,19 +30,19 @@ import (
 	return rand.Int63n(max-min) + min
 }
 
-	func sqr(a int64) (int64) { // возведение в квадрат умножением
+	func sqr(a int64) (int64) { // возведение в квадрат
 	return a*a
 }
 
-	func sqr3(a int64) (int64) { // возведение в квадрат умножением
+	func sqr3(a int64) (int64) { // возведение в куб
 	return sqr(a)*a
 }
 
-	func sqr4(a int64) (int64) { // возведение в квадрат умножением
+	func sqr4(a int64) (int64) { // возведение в четвертую степень
 	return sqr3(a)*a
 }
 
-func sqr5(a int64) (int64) { // возведение в квадрат умножением
+func sqr5(a int64) (int64) { // возведение в пятую степень
 	return sqr4(a)*a
 }
 
