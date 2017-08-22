@@ -14,7 +14,7 @@ package main
 
 import (
 	"fmt"
-	_ "math"
+	_"math"
 	"math/rand"
 	"time"
 )
