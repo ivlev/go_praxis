@@ -23,17 +23,19 @@ func main() {
 //	cd := int(get(1, 320)) // количество покупок
 //	fmt.Println(cd)
 //	counts := make(map[string]int)
-	file, _ := os.Open("foods/1.52.1.FR.dat") // открываем дескриптор файла со строчными данными по странам
+	file, _ := os.Open("foods/1.52.1.CD.dat") // открываем дескриптор файла со строчными данными по фруктам
 	f := bufio.NewReader(file)  // считываем открытый файл в буфер
-//	fmt.Println(f)
+	fmt.Println(*f)
 
-	for i := 1; i<=321; i++ {
-		cd := int(get(1, 320)) // количество покупок
-		read_line, _ := f.ReadString('\n') // считываем файл построчно и переходим к следующей строке
-		fmt.Println(cd)
-		if i == cd {
-		fmt.Printf("%d %s\n", i, read_line)
-		}
+	for { // не очень хорошо заранее оговаривать количество продуктов
+//		i := 12
+//		cd := int(get(1, 320)) // количество покупок
+		ReadLine, _ := f.ReadString('\n') // считываем файл построчно и переходим к следующей строке
+		ReadLine = string(ReadLine)
+// 		fmt.Println(cd)
+//		if i == cd {
+		fmt.Println(ReadLine)
+//		}
 	}
 
 	file.Close()
